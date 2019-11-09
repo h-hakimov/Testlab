@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE script SYSTEM "script.dtd">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root>
+    <action name = "openURL">
+        <param name = "https://www.google.com"></param>
+        <description>Open Browser</description>   
+    </action>  
+    <action name = "Click">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input'></param>
+        <description>Click Element</description>   
+    </action>
+    <action name = "setValue">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input | Netcracker'></param>
+        <description>Set Text Value</description>   
+    </action>
+    <action name = "Click">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[2]/div[2]/div[2]/center/input[1]'></param>
+        <description>Click Search Button</description>   
+    </action>
+    <action name = "checkElementVisible">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[2]/div[2]/div[2]/center/input[1]'></param>
+        <description>Check If Element Is Visible</description>   
+    </action>
+    <action name = "Click">
+        <param name = '//*[@id="rso"]/div/div/div[1]/div/div/div[1]/a/h3'></param>
+        <description>Click Element</description>   
+    </action>
+    <action name = "Screenshot">
+        <param name = ''></param>
+        <description>Screenshot</description>   
+    </action>
+</root>
