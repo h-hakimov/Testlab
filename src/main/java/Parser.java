@@ -13,6 +13,15 @@ import java.io.File;
  */
 public interface Parser {
     
+    /**
+     *
+     * @param file
+     */
     public void parse(File file);
+
+    /**
+     *
+     * @param file
+     */
     public void parse(String file);
 }

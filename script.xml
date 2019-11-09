@@ -31,6 +31,26 @@ and open the template in the editor.
         <param name = '//*[@id="rso"]/div/div/div[1]/div/div/div[1]/a/h3'></param>
         <description>Click Element</description>   
     </action>
+    <action name = "openURL">
+        <param name = "https://www.google.com"></param>
+        <description>Open Browser</description>   
+    </action>  
+    <action name = "Click">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input'></param>
+        <description>Click Element</description>   
+    </action>
+    <action name = "setValue">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input | Yandex'></param>
+        <description>Set Text Value</description>   
+    </action>
+    <action name = "Click">
+        <param name = '//*[@id="tsf"]/div[2]/div[1]/div[2]/div[2]/div[2]/center/input[1]'></param>
+        <description>Click Search Button</description>   
+    </action>
+    <action name = "Click">
+        <param name = '//*[@id="rso"]/div/div/div[1]/div/div/div[1]/a/h3'></param>
+        <description>Click Element</description>   
+    </action>
     <action name = "Screenshot">
         <param name = ''></param>
         <description>Screenshot</description>   

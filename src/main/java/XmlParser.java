@@ -2,20 +2,14 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
 /*
@@ -27,23 +21,34 @@ import org.xml.sax.SAXException;
  *
  * @author User
  */
+
 public class XmlParser implements Parser {
 
+    
     private File xml;
     private DocumentBuilder docbuild;
     private Document document;
     private ArrayList<Action> actionlist = new ArrayList<Action>();
 
+    /**
+     * Get List of actions
+     * @return List of actions
+     */
     public ArrayList<Action> getActionlist() {
         return actionlist;
     }
 
+    /**
+     * Set List of actions
+     * @param actionlist List of actions
+     */
     public void setActionlist(ArrayList<Action> actionlist) {
         this.actionlist = actionlist;
     }
 
-    
-
+    /**
+     *
+     */
     public XmlParser() {
         try {
             docbuild = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -52,6 +57,11 @@ public class XmlParser implements Parser {
         }
     }
 
+    /**
+     * Parse XML file and fetch actions to ArrayList
+     * @param file
+     */
+    @Deprecated
     public void parse(File file) {
         try {
             xml = file;
@@ -64,6 +74,10 @@ public class XmlParser implements Parser {
         }
     }
 
+    /**
+     * Parse XML file and fetch actions to ArrayList
+     * @param file
+     */
     public void parse(String file){
         try {
             document = docbuild.parse(file);
@@ -74,7 +88,11 @@ public class XmlParser implements Parser {
             Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
+    /**
+     * Parse XML file and fetch actions to ArrayList
+     * 
+     */
     private void parseXML() {
         Node root = document.getDocumentElement();
         NodeList actions = root.getChildNodes();

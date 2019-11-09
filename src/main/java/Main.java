@@ -10,10 +10,7 @@
  */
 public class Main {
     
-    
-    public static void main(String[] args) {
-        String file = "script.xml";
-        
+    public void makeTest(String file){
         XmlParser xmlparser = new XmlParser();
         xmlparser.parse(file);
         BrowserActions browser = new BrowserActions();
@@ -40,8 +37,19 @@ public class Main {
                     browser.screenshot();
                 }
             }
-            browser.closeBrowser();
+            //browser.closeBrowser();
         }
+    }
+    
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        String file = "script.xml";
+        
+        Main main = new Main();
+        main.makeTest(file);
         
     }
 }
