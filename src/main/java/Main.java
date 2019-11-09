@@ -37,7 +37,7 @@ public class Main {
                     browser.screenshot();
                 }
             }
-            //browser.closeBrowser();
+            browser.closeBrowser();
         }
     }
     
